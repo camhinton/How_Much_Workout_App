@@ -1,18 +1,41 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Image, Text, SafeAreaView } from "react-native";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HomeScreen } from './src/Components/HomeScreen';
+import { WorkoutHistory } from './src/Components/WorkoutHistory';
+import { WorkoutPlan } from './src/Components/WorkoutPlan';
+import { WorkoutTracker } from './src/Components/WorkoutTracker';
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.white}>How Much?</Text>
-
-      <Image style={styles.logo} source={require("./assets/how_much.jpg")} />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name="Home"
+          component={HomeScreen}
+        />
+        <Stack.Screen 
+          name="WorkoutHistory"
+          component={WorkoutHistory}
+        />
+        <Stack.Screen 
+          name="WorkoutPlans"
+          component={WorkoutPlan}
+        />
+        <Stack.Screen 
+          name="WorkoutTracker"
+          component={WorkoutTracker}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000000",
