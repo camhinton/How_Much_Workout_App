@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, SafeAreaView, Button } from 'react-native';
-import { styles } from '../App';
+import { styles } from '../../App';
 
 export const HomeScreen = ({ navigation }) => {
     return (
@@ -8,7 +8,7 @@ export const HomeScreen = ({ navigation }) => {
         <Text style={styles.white}>How Much?</Text>
         <Image
           style={styles.logo}
-          source={require('./assets/how_much.jpg')} 
+          source={require('../../assets/how_much.jpg')} 
         />
         <Button title="Workout History" onPress={() =>
           navigation.navigate('WorkoutHistory')

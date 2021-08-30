@@ -1,11 +1,14 @@
 import React from 'react';
-import { StyleSheet, Image, Text, SafeAreaView, Button } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen } from './src/HomeScreen';
+import { HomeScreen } from './src/Components/HomeScreen';
+import { WorkoutHistory } from './src/Components/WorkoutHistory';
+import { WorkoutPlan } from './src/Components/WorkoutPlan';
+import { WorkoutTracker } from './src/Components/WorkoutTracker';
 
 
-const stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -17,15 +20,15 @@ export default function App() {
         />
         <Stack.Screen 
           name="WorkoutHistory"
-          component={HomeScreen}
+          component={WorkoutHistory}
         />
         <Stack.Screen 
           name="WorkoutPlans"
-          component={HomeScreen}
+          component={WorkoutPlan}
         />
         <Stack.Screen 
           name="WorkoutTracker"
-          component={HomeScreen}
+          component={WorkoutTracker}
         />
       </Stack.Navigator>
     </NavigationContainer>
