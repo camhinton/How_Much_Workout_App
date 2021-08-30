@@ -19,6 +19,9 @@ export const HomeScreen = ({ navigation }) => {
         <Button title="Start a Workout" onPress={() =>
           navigation.navigate('WorkoutTracker')
         }/>
+        <Button title="Test Card" onPress={() =>
+          navigation.navigate('InWorkoutExerciseCard')
+        }/>
       </SafeAreaView>
     );
   };
