@@ -5,32 +5,25 @@ import { HomeScreen } from './src/screens/HomeScreen';
 import { WorkoutHistory } from './src/screens/WorkoutHistory';
 import { WorkoutPlan } from './src/screens/WorkoutPlan';
 import { WorkoutTracker } from './src/screens/WorkoutTracker';
+import { InWorkoutExerciseCard } from './src/Components/InWorkoutExerciseCard';
 import { styles } from './src/styles/styles';
-
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <NavigationContainer style={styles.container}>
-      <Stack.Navigator>
-        <Stack.Screen 
-          name="Home"
-          component={HomeScreen}
-        />
-        <Stack.Screen 
-          name="WorkoutHistory"
-          component={WorkoutHistory}
-        />
-        <Stack.Screen 
-          name="WorkoutPlans"
-          component={WorkoutPlan}
-        />
-        <Stack.Screen 
-          name="WorkoutTracker"
-          component={WorkoutTracker}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+	return (
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen name='Home' component={HomeScreen} />
+				<Stack.Screen name='WorkoutHistory' component={WorkoutHistory} />
+				<Stack.Screen name='WorkoutPlans' component={WorkoutPlan} />
+				<Stack.Screen name='WorkoutTracker' component={WorkoutTracker} />
+
+				<Stack.Screen
+					name='InWorkoutExerciseCard'
+					component={InWorkoutExerciseCard}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
