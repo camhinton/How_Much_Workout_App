@@ -148,3 +148,6 @@ docs/pages/versions/*/react-native/*.diff
 
 # Local History for Visual Studio Code
 .history/
+
+# Manually added from source control
+App/server/package-lock.json
