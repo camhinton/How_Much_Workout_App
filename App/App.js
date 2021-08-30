@@ -6,7 +6,10 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.white}>How Much?</Text>
-      <Image source={require('./assets/how_much.jpg')} />
+      <Image
+        style={styles.logo}
+        source={require('./assets/how_much.jpg')} 
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -21,5 +24,9 @@ const styles = StyleSheet.create({
   },
   white: {
     color: '#fff'
+  },
+  logo: {
+    width: 200,
+    height: 200
   }
 });
