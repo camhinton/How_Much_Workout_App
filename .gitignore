@@ -111,3 +111,9 @@ local.properties
 
 # Android memory profiler files
 *.hprof
+
+
+
+
+
+.expo
