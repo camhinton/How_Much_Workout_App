@@ -1,17 +1,19 @@
 const mongoose = require('mongoose')
 
-const Set = {
+const Set = new mongoose.Schema({
   exercise: String,
-  repCount: Int16Array,
-  weight: Int16Array
-}
+  repCount: Number,
+  weight: Number
+})
 
-const SetGroup = {
-  sets: Array<Set>
-}
+const SetGroup = new mongoose.Schema({
+  sets: [Set]
+})
 
 const WorkoutSchema = new mongoose.Schema({
   userId: String,
-  date: String,
-  setGroups: Array<SetGroup>
+  date: Date,
+  setGroups: [SetGroup]
 })
+
+mongoose.model("workout", WorkoutSchema)
